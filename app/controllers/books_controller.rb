@@ -41,6 +41,13 @@ class BooksController < ApplicationController
     
         #Remove a book
         def destroy
+          id = params["id"].to_i
+          if @@new_data == nil
+            @data.delete(@data[id])
+          else
+            @@new_data.delete(@@new_data[id])
+          end      
+          render json: @@new_data   
         end
     
         private
