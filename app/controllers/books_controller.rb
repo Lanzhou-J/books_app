@@ -36,7 +36,19 @@ class BooksController < ApplicationController
     
         #Update a book
         def update
-          render json: @@new_data
+        title = params["article"]["title"] 
+        author = params["article"]["author"] 
+        new_hash = {:title => title, :author => author}
+        id = params["id"].to_i
+          if @@new_data == []
+            @data[id] = new_hash
+            p @data
+            render json: @data
+          else
+            @@new_data[id] = new_hash
+            render json: @@new_data
+          end      
+          
         end
     
         #Remove a book
