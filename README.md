@@ -27,3 +27,5 @@ ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
 - books list: http://localhost:3000/books
 - create new books: http://localhost:3000/books/add
 - show a single book: http://localhost:3000/books/show/:id
+- delete a book: http://localhost:3000/books/delete/:id
+- update information: http://localhost:3000/books/change
