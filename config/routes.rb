@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/books/update", to: "books#put"
   post "/books/new", to: "books#create", as: "create"
   get "books/show/:id", to: "books#show", as: "show"
+  get "books/delete/:id", to: "books#destroy", as: "destroy"
 
 end
